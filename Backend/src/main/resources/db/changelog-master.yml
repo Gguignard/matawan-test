@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - preConditions:
+      - runningAs:
+          username:  postgres
+
+  - include:
+      file: migration/script.1.0.0.sql
+      relativeToChangelogFile: true
