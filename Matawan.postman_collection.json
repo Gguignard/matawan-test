@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "005f3213-ed1c-4400-93bd-0a37b8372ca8",
+		"name": "Matawan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6974689"
+	},
+	"item": [
+		{
+			"name": "Create Team",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"test2\",\r\n    \"acronym\":\"ATZE\",\r\n    \"budget\":1,\r\n    \"players\": [{\r\n        \"name\":\"Toto\",\r\n        \"position\": \"Bench\",\r\n        \"age\":22\r\n    }]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/teams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Teams",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "page",
+						"value": "0",
+						"description": "\n",
+						"type": "text"
+					},
+					{
+						"key": "size",
+						"value": "3",
+						"type": "text"
+					},
+					{
+						"key": "order",
+						"value": "asc",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "sort",
+						"value": "name",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/teams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
